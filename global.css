@@ -18,6 +18,10 @@ body {
 .form-control {
 	color: lightgray;
 }
+
+.form-control:focus {
+	color: gray;
+}
 /*
 a {
 	color: rgb(0,100,200);
