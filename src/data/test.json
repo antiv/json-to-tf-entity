@@ -1,0 +1,38 @@
+{
+    "self": "https://api.tempo.io/core/3/worklogs/12600",
+    "tempoWorklogId": 126,
+    "jiraWorklogId": 10100,
+    "issue": {
+        "self": "https://my-cloud-instance.atlassian.net/rest/api/2/issue/DUM-1",
+        "key": "DUM-1"
+    },
+    "timeSpentSeconds": 3600,
+    "billableSeconds": 5200,
+    "startDate": "2017-02-06",
+    "startTime": "20:06:00",
+    "description": "Investigating a problem with our external database system",
+    "createdAt": "2017-02-06T16:41:41Z",
+    "updatedAt": "2017-02-06T16:41:41Z",
+    "author": {
+        "self": "https://my-cloud-instance.atlassian.net/rest/api/2/user?accountId=1111aaaa2222bbbb3333cccc",
+        "accountId": "1111aaaa2222bbbb3333cccc",
+        "displayName": "John Brown"
+    },
+    "attributes": {
+        "self": "https://api.tempo.io/core/3/worklogs/126/work-attribute-values",
+        "values": [
+            {
+                "key": "_DELIVERED_",
+                "value": true
+            },
+            {
+                "key": "_EXTERNALREF_",
+                "value": "EXT-44556"
+            },
+            {
+                "key": "_COLOR_",
+                "value": "red"
+            }
+        ]
+    }
+}
