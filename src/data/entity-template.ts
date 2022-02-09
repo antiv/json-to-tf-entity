@@ -10,6 +10,7 @@ package {modelPackage};
 import com.braintribe.model.generic.GenericEntity;
 import com.braintribe.model.generic.reflection.EntityType;
 import com.braintribe.model.generic.reflection.EntityTypes;
+{imports}
 
 public interface {entityName} extends GenericEntity {
 

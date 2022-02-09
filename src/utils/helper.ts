@@ -29,9 +29,26 @@ export const createEntity: any = (
       );
     })
     .join('\n\n\t');
+
+  let hasList = false;
+  let imports: string = props
+    .map((e) => {
+      if (e.type.startsWith('list<')) hasList = true;
+      if (e.type == 'object' || e.type.startsWith('list<'))
+        return 'import ' + modelPackage + '.' + getCapital(e.name) + ';';
+      return '';
+    })
+    .filter((i) => i != '')
+    .join('\n');
+
+  if (hasList) {
+    imports = 'import java.util.List;\n' + imports;
+  }
+
   result[entityName] = template
     .replaceAll('{modelPackage}', modelPackage)
     .replaceAll('{entityName}', entityName)
+    .replaceAll('{imports}', imports)
     .replaceAll('{constants}', constants)
     .replaceAll('{code}', code);
 
