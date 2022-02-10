@@ -76,6 +76,7 @@ export const createEntity: any = (
 };
 
 function getChild(val) {
+  if (!val) return [{ name: '', type: '', val: null }];
   return Object.entries(val).map((n) => {
     return {
       name: n[0],
